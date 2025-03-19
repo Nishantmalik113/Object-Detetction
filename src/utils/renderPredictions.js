@@ -31,16 +31,21 @@ export const renderPredictions = (predictions, ctx) => {
       ctx.fillStyle = "#000000";
       ctx.fillText(prediction.class, x, y);
 
-      if(isPerson){
-        playAudio();
-      }
+      var txt = `This is a ${prediction.class}`
+      if(!isPerson){
+      playAudio(txt);}
+    
 
 
     });
 
 };
 
-const playAudio =throttle(()=>{
-    const audio = new Audio("/pols-aagyi-pols.mp3");
-    audio.play();
+var tts = window.speechSynthesis;
+
+
+const playAudio =throttle((txt)=>{
+  var toSpeak = new SpeechSynthesisUtterance(txt);
+    //const audio = new Audio("/pols-aagyi-pols.mp3");
+    tts.speak(toSpeak);
 },2000);

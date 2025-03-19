@@ -20,7 +20,7 @@ export default function ObjectDetection() {
 
         detectInterval = setInterval(()=>{
             runObjectDetection(net)
-        },10)
+        },2000)
 
 
     }
