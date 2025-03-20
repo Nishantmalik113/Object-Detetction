@@ -46,6 +46,5 @@ var tts = window.speechSynthesis;
 
 const playAudio =throttle((txt)=>{
   var toSpeak = new SpeechSynthesisUtterance(txt);
-    //const audio = new Audio("/pols-aagyi-pols.mp3");
     tts.speak(toSpeak);
 },2000);
