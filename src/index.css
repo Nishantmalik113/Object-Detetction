@@ -1,1 +1,12 @@
 @import "tailwindcss";
+
+a,
+button{
+    background: white;
+    padding: 40px;
+    border-radius: 20px;    
+}
+a:hover,
+button:hover{
+    cursor: pointer;
+}

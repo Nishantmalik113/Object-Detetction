@@ -32,7 +32,7 @@ export const renderPredictions = (predictions, ctx) => {
       ctx.fillText(prediction.class, x, y);
 
       var txt = `This is a ${prediction.class}`
-      if(!isPerson){
+      if(isPerson){
       playAudio(txt);}
     
 
