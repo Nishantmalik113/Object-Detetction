@@ -32,8 +32,8 @@ export const renderPredictions = (predictions, ctx) => {
       ctx.fillText(prediction.class, x, y);
 
       var txt = `This is a ${prediction.class}`
-      if(!isPerson){
-      playAudio(txt);}
+      //if(!isPerson){
+      playAudio(txt);//}
     
 
 
@@ -47,4 +47,4 @@ var tts = window.speechSynthesis;
 const playAudio =throttle((txt)=>{
   var toSpeak = new SpeechSynthesisUtterance(txt);
     tts.speak(toSpeak);
-},2000);
+},3000);

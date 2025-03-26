@@ -20,7 +20,7 @@ export default function ObjectDetection() {
 
         detectInterval = setInterval(()=>{
             runObjectDetection(net)
-        },2000)
+        },3000)
 
 
     }
@@ -38,7 +38,7 @@ export default function ObjectDetection() {
             const detectedObjects = await net.detect(
                 webcamRef.current.video, 
                 undefined, 
-                0.6
+                0.7
             )
             console.log(detectedObjects)
 
