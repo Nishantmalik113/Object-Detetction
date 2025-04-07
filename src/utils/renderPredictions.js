@@ -44,7 +44,7 @@ export const renderPredictions = (predictions, ctx) => {
 var tts = window.speechSynthesis;
 
 
-const playAudio =throttle((txt)=>{
+export const playAudio =throttle((txt)=>{
   var toSpeak = new SpeechSynthesisUtterance(txt);
     tts.speak(toSpeak);
 },3000);
